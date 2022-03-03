@@ -21,8 +21,7 @@ function stopScan(success,) {
 
 module.exports = {
     scan: scan,
-    encode: encode,
-    stopScan: stopScan
+    encode: encode
 };
 
 require("cordova/exec/proxy").add("BarcodeScanner", module.exports);

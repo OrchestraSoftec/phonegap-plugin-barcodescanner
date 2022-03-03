@@ -121,8 +121,11 @@ public class BarcodeScanner extends CordovaPlugin {
             } else {
               scan(args);
             }
-        } else {
-            return false;
+        } else if((action.equals(stopScan)) {
+            stopScan()
+            return true;
+        }else {
+            return true
         }
         return true;
     }

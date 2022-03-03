@@ -158,6 +158,7 @@ BarcodeScanner.prototype.stopScan = function (successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'BarcodeScanner', 'stopScan', [
         {}
     ]);
+    scanInProgress = false;
 }
 
 var barcodeScanner = new BarcodeScanner();
