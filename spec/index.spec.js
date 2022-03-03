@@ -32,8 +32,8 @@ describe('phonegap-plugin-barcodescanner', function () {
         });
 
         it("should contain a stopScan function", function () {
-            expect(BarcodeScanner.stopScann).toBeDefined();
-            expect(typeof BarcodeScanner.stopScann == 'function').toBe(true);
+            expect(BarcodeScanner.stopScan).toBeDefined();
+            expect(typeof BarcodeScanner.stopScan == 'function').toBe(true);
         });
 
         it("should contain an encode function", function () {

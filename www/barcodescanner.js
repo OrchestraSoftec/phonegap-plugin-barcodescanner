@@ -154,7 +154,7 @@ BarcodeScanner.prototype.encode = function (type, data, successCallback, errorCa
 
 //-------------------------------------------------------------------
 
-BarcodeScanner.prototype.stopScann = function (successCallback, errorCallback) {
+BarcodeScanner.prototype.stopScan = function (successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'BarcodeScanner', 'stopScan', [
         {}
     ]);
