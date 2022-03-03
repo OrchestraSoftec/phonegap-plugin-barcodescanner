@@ -263,6 +263,17 @@ public class BarcodeScanner extends CordovaPlugin {
         this.cordova.getActivity().startActivity(intentEncode);
     }
 
+    public void stopScan() {
+        final CordovaPlugin that = this;
+        final Activity activity = that.cordova.getActivity();
+        final Intent intent = activity.getIntent();
+
+        activity.setResult(Activity.RESULT_CANCELED , intent);
+        activity.finishActivity(REQUEST_CODE);
+
+        this.callbackContext.success();
+    }
+
     /**
      * check application's permissions
      */
