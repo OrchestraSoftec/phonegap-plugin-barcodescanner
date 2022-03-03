@@ -38,6 +38,7 @@ public class BarcodeScanner extends CordovaPlugin {
 
     private static final String SCAN = "scan";
     private static final String ENCODE = "encode";
+    private static final String STOP_SCAN = "stopScan";
     private static final String CANCELLED = "cancelled";
     private static final String FORMAT = "format";
     private static final String TEXT = "text";
@@ -121,11 +122,11 @@ public class BarcodeScanner extends CordovaPlugin {
             } else {
               scan(args);
             }
-        } else if((action.equals(stopScan)) {
-            stopScan()
+        } else if(action.equals(STOP_SCAN)) {
+            stopScan();
             return true;
         }else {
-            return true
+            return true;
         }
         return true;
     }
