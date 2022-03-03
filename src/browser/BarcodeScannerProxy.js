@@ -1,10 +1,10 @@
 function scan(success, error) {
     var code = window.prompt("Enter barcode value (empty value will fire the error handler):");
-    if(code) {
+    if (code) {
         var result = {
-            text:code,
-            format:"Fake",
-            cancelled:false
+            text: code,
+            format: "Fake",
+            cancelled: false
         };
         success(result);
     } else {
@@ -15,10 +15,14 @@ function scan(success, error) {
 function encode(type, data, success, errorCallback) {
     success();
 }
+function stopScan(success,) {
+    success();
+}
 
 module.exports = {
     scan: scan,
-    encode: encode
+    encode: encode,
+    stopScan: stopScan
 };
 
-require("cordova/exec/proxy").add("BarcodeScanner",module.exports);
+require("cordova/exec/proxy").add("BarcodeScanner", module.exports);
