@@ -1,3 +1,10 @@
+
+# To recompile the ARR fie clone and edit this repository
+
+https://github.com/EddyVerbruggen/barcodescanner-lib-aar
+
+
+
 # PhoneGap Plugin BarcodeScanner
 ================================
 
